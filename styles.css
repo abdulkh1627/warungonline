@@ -1,0 +1,90 @@
+.card-img-top {
+  object-fit: cover; /* Memastikan gambar mengisi seluruh space yang tersedia */
+  height: 300px; /* Setting tinggi gambar */
+  border-radius: 10px; /* Set border radius untuk membuat sudut card menjadi bulat */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan shadow pada card */
+  transition: all 0.2s ease-in-out; /* Animasi ketika card berubah ukuran */
+}
+
+.card-img-top:hover {
+  transform: scale(1.1); /* Membesarkan gambar ketika cursor diarahkan pada card */
+  opacity: 0.8; /* Menambahkan efek opacity pada gambar ketika cursor diarahkan pada card */
+}
+.card-img-top {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-top:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8));
+  z-index: 1;
+}
+
+.card-img-top img {
+  transition: all 0.3s ease-in-out;
+}
+
+.card-img-top:hover img {
+  transform: scale(1.1);
+}
+
+.card-img-top .card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: 1px 1px #000;
+  z-index: 2;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: darkblue;
+}
+
+@media (max-width: 576px) {
+  .card-text {
+    font-size: 14px;
+  }
+}
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+@keyframes rainbow {
+  0% {
+    background-color: #413b3f;
+  }
+  25% {
+    background-color: #9f9f98;
+  }
+  50% {
+    background-color: #c4bbbb;
+  }
+  75% {
+    background-color: #f3f6c0;
+  }
+  100% {
+    background-color: #c7c7f8;
+  }
+}
+
+.card {
+  animation: rainbow 3s infinite;
+}
